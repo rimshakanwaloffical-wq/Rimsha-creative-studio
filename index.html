@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rimsha Creative Studio | Graphic Design</title>
+<meta name="description" content="Rimsha Creative Studio offers professional logo design, branding, social media graphics, flyers and business card design.">
+<style>
+:root{--dark:#111827;--purple:#7c3aed;--pink:#ec4899;--light:#f8fafc;--muted:#64748b;--white:#fff;--line:#e5e7eb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--white);line-height:1.6}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;text-decoration:none;color:var(--dark)}
+.logo span{color:var(--purple)}
+nav a{color:#334155;text-decoration:none;margin-left:25px;font-weight:600;font-size:14px}
+nav a:hover{color:var(--purple)}
+.menu{display:none;background:none;border:0;font-size:25px}
+.hero{padding:95px 0 85px;background:radial-gradient(circle at 85% 20%,#f5d0fe 0,transparent 28%),linear-gradient(135deg,#faf5ff,#fff 55%,#fdf2f8)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.badge{display:inline-block;padding:8px 14px;border-radius:30px;background:#ede9fe;color:#6d28d9;font-weight:700;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-2px;margin-bottom:22px}
+.gradient{background:linear-gradient(90deg,var(--purple),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:590px;margin-bottom:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin-right:10px;transition:.2s}
+.btn-primary{background:var(--dark);color:white}
+.btn-primary:hover{transform:translateY(-2px);background:var(--purple)}
+.btn-outline{border:1px solid #cbd5e1;color:var(--dark);background:white}
+.visual{min-height:430px;border-radius:30px;background:linear-gradient(145deg,#17122a,#4c1d95);padding:24px;position:relative;overflow:hidden;box-shadow:0 25px 60px #7c3aed33}
+.card{background:white;border-radius:20px;padding:22px;position:absolute;box-shadow:0 20px 40px #0003}
+.card.one{width:70%;top:45px;left:45px;transform:rotate(-7deg)}
+.card.two{width:65%;bottom:45px;right:35px;transform:rotate(7deg)}
+.mini-title{font-weight:800;font-size:18px}.mini-line{height:9px;background:#e9d5ff;border-radius:8px;margin-top:12px}.mini-box{height:95px;border-radius:14px;background:linear-gradient(135deg,#c084fc,#f472b6);margin-top:16px}
+section{padding:90px 0}
+.section-head{text-align:center;max-width:650px;margin:0 auto 45px}
+.section-head h2{font-size:38px;line-height:1.1;margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.services{background:#fafafa}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service,.price,.about-box{border:1px solid var(--line);border-radius:18px;padding:26px;background:white}
+.icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:#f3e8ff;font-size:24px;margin-bottom:18px}
+.service h3{margin-bottom:8px}.service p{color:var(--muted);font-size:14px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work{height:250px;border-radius:20px;padding:25px;display:flex;align-items:flex-end;position:relative;overflow:hidden;color:white}
+.work:nth-child(1){background:linear-gradient(135deg,#312e81,#a855f7)}
+.work:nth-child(2){background:linear-gradient(135deg,#be185d,#fb7185)}
+.work:nth-child(3){background:linear-gradient(135deg,#0f172a,#334155)}
+.work:nth-child(4){background:linear-gradient(135deg,#065f46,#34d399)}
+.work:nth-child(5){background:linear-gradient(135deg,#92400e,#f59e0b)}
+.work:nth-child(6){background:linear-gradient(135deg,#1e3a8a,#38bdf8)}
+.work:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ffffff20;top:-50px;right:-30px}
+.work div{position:relative}.work h3{font-size:22px}.work p{font-size:13px;opacity:.85}
+.about{background:#f8fafc}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.about-box h3{font-size:24px;margin-bottom:12px}.about-box p{color:var(--muted)}
+.checks{margin-top:18px;display:grid;gap:10px}.checks span{font-weight:600}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price h3{font-size:22px}.price .amount{font-size:30px;font-weight:800;margin:12px 0}.price ul{list-style:none;color:var(--muted);font-size:14px}.price li{margin:8px 0}.price.featured{border:2px solid var(--purple);transform:translateY(-8px)}
+.contact{background:linear-gradient(135deg,#181026,#4c1d95);color:white}
+.contact .section-head p{color:#ddd6fe}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{background:#ffffff12;border:1px solid #ffffff25;padding:28px;border-radius:18px}.contact-card p{margin:10px 0;color:#e9d5ff}
+.contact-card a{color:white;text-decoration:none;font-weight:700}
+footer{padding:25px 0;background:#0b0f19;color:#94a3b8;text-align:center;font-size:14px}
+.float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;text-decoration:none;font-size:27px;box-shadow:0 8px 25px #0003;z-index:30}
+@media(max-width:800px){
+nav{display:none}.menu{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.portfolio,.pricing{grid-template-columns:1fr 1fr}.visual{min-height:350px}
+}
+@media(max-width:520px){
+section{padding:65px 0}.grid4,.portfolio,.pricing{grid-template-columns:1fr}.hero{padding:65px 0}.visual{min-height:330px}.card.one{left:20px}.card.two{right:20px}
+h1{font-size:46px}.price.featured{transform:none}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#home">Rimsha<span>Creative</span></a>
+<button class="menu" onclick="toggleMenu()">☰</button>
+<nav id="nav">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<span class="badge">CREATIVE GRAPHIC DESIGN STUDIO</span>
+<h1>Designs that make your <span class="gradient">brand stand out.</span></h1>
+<p>I create modern, professional and eye-catching designs for businesses, brands and social media. Let’s turn your ideas into visuals people remember.</p>
+<a class="btn btn-primary" href="https://wa.me/923144535277?text=Hello%20Rimsha%2C%20I%20want%20to%20discuss%20a%20graphic%20design%20project." target="_blank">WhatsApp Me</a>
+<a class="btn btn-outline" href="#portfolio">View Portfolio</a>
+</div>
+<div class="visual">
+<div class="card one"><div class="mini-title">BRAND IDENTITY</div><div class="mini-box"></div><div class="mini-line" style="width:70%"></div></div>
+<div class="card two"><div class="mini-title">SOCIAL MEDIA</div><div class="mini-line" style="width:80%"></div><div class="mini-line" style="width:55%"></div><div class="mini-box"></div></div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-head"><h2>My Design Services</h2><p>Creative solutions designed to give your business a professional and memorable visual identity.</p></div>
+<div class="grid4">
+<div class="service"><div class="icon">✦</div><h3>Logo Design</h3><p>Unique and professional logos that represent your brand identity.</p></div>
+<div class="service"><div class="icon">▣</div><h3>Social Media</h3><p>Engaging posts, ads and stories for Instagram, Facebook and other platforms.</p></div>
+<div class="service"><div class="icon">◈</div><h3>Branding</h3><p>Complete visual branding including colors, typography and brand materials.</p></div>
+<div class="service"><div class="icon">✎</div><h3>Print Design</h3><p>Business cards, flyers, brochures, invitations and promotional materials.</p></div>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+<div class="section-head"><h2>Selected Work</h2><p>A sample creative portfolio showing different design styles and services.</p></div>
+<div class="portfolio">
+<div class="work"><div><h3>Brand Identity</h3><p>Modern visual identity concept</p></div></div>
+<div class="work"><div><h3>Beauty Campaign</h3><p>Social media creative</p></div></div>
+<div class="work"><div><h3>Business Kit</h3><p>Professional corporate design</p></div></div>
+<div class="work"><div><h3>Food Promotion</h3><p>Digital advertising design</p></div></div>
+<div class="work"><div><h3>Fashion Post</h3><p>Promotional social graphic</p></div></div>
+<div class="work"><div><h3>Tech Branding</h3><p>Clean modern design</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+<div class="about-box">
+<h3>About Rimsha Creative Studio</h3>
+<p>I’m a graphic designer focused on creating clean, attractive and purposeful designs. I combine creativity with attention to detail to help brands look professional online and offline.</p>
+<div class="checks">
+<span>✓ Creative & original concepts</span><span>✓ Professional and clean layouts</span><span>✓ Friendly communication</span><span>✓ Designs tailored to your brand</span>
+</div>
+</div>
+<div class="about-box">
+<h3>Why Work With Me?</h3>
+<p>Whether you are starting a new business or improving an existing brand, I can help you build a consistent visual presence that communicates your message clearly.</p>
+<div class="checks">
+<span>✓ Fast project communication</span><span>✓ Social-media-ready designs</span><span>✓ Multiple design categories</span><span>✓ Client-focused revisions</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="container">
+<div class="section-head"><h2>Simple Starting Packages</h2><p>Flexible packages for different design needs. Final pricing can be discussed according to your project.</p></div>
+<div class="pricing">
+<div class="price"><h3>Starter</h3><div class="amount">Rs. 2,500+</div><ul><li>✓ 1 Logo Concept</li><li>✓ 2 Revisions</li><li>✓ High-quality final file</li><li>✓ Basic brand guidance</li></ul></div>
+<div class="price featured"><h3>Business</h3><div class="amount">Rs. 5,000+</div><ul><li>✓ Professional logo</li><li>✓ 5 Social Media Posts</li><li>✓ 3 Revisions</li><li>✓ Brand color suggestions</li></ul></div>
+<div class="price"><h3>Social Media</h3><div class="amount">Rs. 3,000+</div><ul><li>✓ 10 Social Media Designs</li><li>✓ Custom creative style</li><li>✓ Platform-ready sizes</li><li>✓ Revisions included</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-head"><h2>Let’s Create Something Great</h2><p>Have a project in mind? Send me a message and let’s discuss your design requirements.</p></div>
+<div class="contact-grid">
+<div class="contact-card"><h3>WhatsApp / Phone</h3><p>Available for project inquiries and design discussions.</p><a href="https://wa.me/923144535277" target="_blank">0314 4535277 →</a></div>
+<div class="contact-card"><h3>Start Your Project</h3><p>Tell me what you need — logo, social media post, branding, flyer or another design.</p><a href="https://wa.me/923144535277?text=Hello%20Rimsha%2C%20I%20would%20like%20to%20start%20a%20graphic%20design%20project." target="_blank">Message on WhatsApp →</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Rimsha Creative Studio. All rights reserved.</div></footer>
+<a class="float" href="https://wa.me/923144535277" target="_blank" aria-label="WhatsApp">⌕</a>
+
+<script>
+function toggleMenu(){
+ const n=document.getElementById('nav');
+ n.style.display=n.style.display==='flex'?'none':'flex';
+ n.style.flexDirection='column'; n.style.position='absolute'; n.style.right='4%'; n.style.top='74px';
+ n.style.background='white'; n.style.padding='15px 20px'; n.style.borderRadius='12px'; n.style.boxShadow='0 10px 30px #0002';
+}
+</script>
+</body>
+</html>
